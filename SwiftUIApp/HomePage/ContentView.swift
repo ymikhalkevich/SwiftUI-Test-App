@@ -19,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                Cell(user: swiftbook)
+                TeacherCell(user: swiftbook)
                     .padding(.bottom, 5)
                     .padding(.top, 5)
                 

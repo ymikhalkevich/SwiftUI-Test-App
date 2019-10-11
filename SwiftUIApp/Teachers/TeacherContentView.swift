@@ -12,7 +12,7 @@ struct TeacherContentView: View {
     var body: some View {
         NavigationView {
             List(userResponse) { user in
-                Cell(user: user)
+                TeacherCell(user: user)
             }
             .navigationBarTitle("Teachers")
         }
