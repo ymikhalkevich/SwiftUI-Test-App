@@ -13,7 +13,7 @@ struct Cell: View {
     var user: UserResponse
     
     var body: some View {
-        VStack (spacing: 20.0) {
+        VStack (spacing: 10.0) {
             HStack (spacing: 4.0) {
                 Image(user.profileImage)
                     .resizable()
@@ -34,6 +34,7 @@ struct Cell: View {
             Text(user.text).lineLimit(nil)
            // .padding()
         }
+        .padding(.top, 5)
     }
 }
 
