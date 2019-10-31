@@ -13,7 +13,7 @@ struct ProductsCell: View {
     var items: [ProductsResponse]
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 0) {
+        VStack (alignment: HorizontalAlignment.leading, spacing: 0) {
             Text(self.categoryName).font(.headline)
                 .padding(.leading, 15)
                 .padding(.top, 10)
@@ -21,7 +21,9 @@ struct ProductsCell: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack (alignment: .center, spacing: 0){
                         ForEach(self.items) { item in
-                            ProductItem(object: item)
+                            NavigationLink(destination: DeteilPage(object: item)) {
+                                ProductItem(object: item)
+                            }
                         }
                     }
                 }
@@ -30,7 +32,9 @@ struct ProductsCell: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack (alignment: .center, spacing: 0){
                         ForEach(self.items) { item in
-                            ProductItem(object: item)
+                            NavigationLink(destination: DeteilPage(object: item)) {
+                                ProductItem(object: item)
+                            }
                         }
                     }
                 }

@@ -10,12 +10,14 @@ import SwiftUI
 
 struct TeacherContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationView() {
             List(userResponse) { user in
                 TeacherCell(user: user)
             }
-            .navigationBarTitle("Teachers")
+            .navigationBarTitle("Teachers", displayMode: .automatic)
+            Spacer()
         }
+        //.padding(-0.5)
     }
 }
 

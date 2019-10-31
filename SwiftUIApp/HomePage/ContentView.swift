@@ -20,7 +20,6 @@ struct ContentView: View {
         NavigationView {
             List {
                 TeacherCell(user: swiftbook)
-                    .padding(.bottom, 5)
                     .padding(.top, 5)
                 
                 ForEach(self.categories.keys.sorted(), id: \.self) { key in

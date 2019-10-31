@@ -13,7 +13,7 @@ struct TeacherCell: View {
     var user: UserResponse
     
     var body: some View {
-        VStack (spacing: 10.0) {
+        VStack (spacing: 5.0) {
             HStack (spacing: 4.0) {
                 Image(user.profileImage)
                     .resizable()
@@ -30,6 +30,7 @@ struct TeacherCell: View {
                 }
             }
             Text(user.text).lineLimit(nil)
+            Spacer()
         }
         .padding(.top, 5)
     }
